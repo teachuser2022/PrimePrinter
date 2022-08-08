@@ -1,0 +1,15 @@
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/bin/Debug/net6.0/PrimePrinter
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/bin/Debug/net6.0/PrimePrinter.deps.json
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/bin/Debug/net6.0/PrimePrinter.runtimeconfig.json
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/bin/Debug/net6.0/PrimePrinter.dll
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/bin/Debug/net6.0/PrimePrinter.pdb
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.csproj.AssemblyReference.cache
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.AssemblyInfoInputs.cache
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.AssemblyInfo.cs
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.csproj.CoreCompileInputs.cache
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.dll
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/refint/PrimePrinter.dll
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.pdb
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/PrimePrinter.genruntimeconfig.cache
+/Users/milad/RiderProjects/PrimePrinter/PrimePrinter/obj/Debug/net6.0/ref/PrimePrinter.dll
