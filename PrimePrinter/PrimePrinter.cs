@@ -1,82 +1,92 @@
 ﻿using System.Diagnostics;
 
-public class PrimePrinter
+public class PrimePrinterHelper
 {
-    public static void Main(string[] args)
+    private int[] primes = new int[numberOfPrimes + 1];
+    private int pagenumber;
+    private int pageoffset;
+    private int rowoffset;
+    private int column;
+    private int cacndidate;
+    private int primeIndex;
+    private bool possiblyPrime;
+    private int ord;
+    private int square;
+    private int N;
+    private int[] multiples = new int[Ordmax + 1];
+    private const int numberOfPrimes = 1000;
+    private const int linesPerPage = 50;
+    private const int columns = 4;
+    private const int Ordmax = 30;
+
+    public void primeMethod()
     {
-        const int M = 1000;
-        const int RR = 50;
-        const int CC = 4;
-        const int ORDMAX = 30;
-        var P = new int[M + 1];
-        int PAGENUMBER;
-        int PAGEOFFSET;
-        int ROWOFFSET;
-        int C;
-        int J;
-        int K;
-        bool JPRIME;
-        int ORD;
-        int SQUARE;
-        var N = 0;
-        var MULT = new int[ORDMAX + 1];
+        N = 0;
 
-        J = 1;
-        K = 1;
-        P[1] = 2;
-        ORD = 2;
-        SQUARE = 9;
+        cacndidate = 1;
+        primeIndex = 1;
+        primes[1] = 2;
+        ord = 2;
+        square = 9;
 
-        while (K < M)
+        while (primeIndex < numberOfPrimes)
         {
             do
             {
-                J += 2;
-                if (J == SQUARE)
+                cacndidate += 2;
+                if (cacndidate == square)
                 {
-                    ORD++;
-                    SQUARE = P[ORD] * P[ORD];
-                    MULT[ORD - 1] = J;
+                    ord++;
+                    square = primes[ord] * primes[ord];
+                    multiples[ord - 1] = cacndidate;
                 }
 
                 N = 2;
-                JPRIME = true;
-                while (N < ORD && JPRIME)
+                possiblyPrime = true;
+                while (N < ord && possiblyPrime)
                 {
-                    while (MULT[N] < J)
-                        MULT[N] += P[N] + P[N];
-                    if (MULT[N] == J)
-                        JPRIME = false;
+                    while (multiples[N] < cacndidate)
+                        multiples[N] += primes[N] + primes[N];
+                    if (multiples[N] == cacndidate)
+                        possiblyPrime = false;
                     N++;
                 }
-            } while (!JPRIME);
+            } while (!possiblyPrime);
 
-            K++;
-            P[K] = J;
+            primeIndex++;
+            primes[primeIndex] = cacndidate;
         }
 
-        PAGENUMBER = 1;
-        PAGEOFFSET = 1;
-        while (PAGEOFFSET <= M)
+        pagenumber = 1;
+        pageoffset = 1;
+        while (pageoffset <= numberOfPrimes)
         {
             Console.Write("The First ");
-            Console.Write(M);
+            Console.Write(numberOfPrimes);
             Console.Write(" Prime Numbers --- Page ");
-            Console.Write(PAGENUMBER);
+            Console.Write(pagenumber);
             Console.WriteLine("\n");
-            for (ROWOFFSET = PAGEOFFSET; ROWOFFSET <= PAGEOFFSET + RR - 1; ROWOFFSET++)
+            for (rowoffset = pageoffset; rowoffset <= pageoffset + linesPerPage - 1; rowoffset++)
             {
-                for (C = 0; C <= CC - 1; C++)
-                    if (ROWOFFSET + C * RR <= M)
-                        Console.Write("{0} ", P[ROWOFFSET + C * RR]);
+                for (column = 0; column <= columns - 1; column++)
+                    if (rowoffset + column * linesPerPage <= numberOfPrimes)
+                        Console.Write("{0} ", primes[rowoffset + column * linesPerPage]);
                 Console.WriteLine();
             }
 
             Console.WriteLine("");
 
-            PAGENUMBER++;
-            PAGEOFFSET += RR * CC;
+            pagenumber++;
+            pageoffset += linesPerPage * columns;
         }
     }
 }
 
+public class PrimePrinter
+{
+    public static void Main(string[] args)
+    {
+        PrimePrinterHelper printerHelper = new PrimePrinterHelper();
+        printerHelper.primeMethod();
+    }
+}

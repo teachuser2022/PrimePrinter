@@ -21,7 +21,7 @@ public class PrimeGeneratorTests
         RedirectConsoleOutputToLeadFile();
 
         // Act
-        PrimePrinter.Main(new string[0]);
+        PrimePrinter.Main(Array.Empty<string>());
 
         // Assert
         ResetConsoleOutput();
